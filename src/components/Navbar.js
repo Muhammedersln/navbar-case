@@ -146,11 +146,13 @@ export default function Navbar({ onFilterChange }) {
                     {/* Mobile Logo - Center */}
                     <div className="flex-1 flex justify-center md:hidden">
                         <div className="w-32 h-8 flex items-center justify-center">
-                            <Image 
-                                src={MobileLogo} 
-                                alt="Logo"
-                                className="w-full h-full object-contain"
-                            />
+                            <Link href="/">
+                                <Image
+                                    src={MobileLogo}
+                                    alt="Logo"
+                                    className="w-full h-full object-contain"
+                                />
+                            </Link>
                         </div>
                     </div>
 
@@ -158,11 +160,11 @@ export default function Navbar({ onFilterChange }) {
                     <div className="hidden md:flex items-center space-x-4">
                         <div className="w-32 h-8 flex items-center justify-center">
                             <Link href="/">
-                            <Image 
-                                src={DesktopLogo} 
-                                alt="Logo"
-                                className="w-full h-full object-contain"
-                            />
+                                <Image
+                                    src={DesktopLogo}
+                                    alt="Logo"
+                                    className="w-full h-full object-contain"
+                                />
                             </Link>
                         </div>
                     </div>
@@ -181,9 +183,9 @@ export default function Navbar({ onFilterChange }) {
                             </button>
                         </Link>
                         <Link href="/register">
-                        <button  className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors">
-                            Register
-                        </button>
+                            <button className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors">
+                                Register
+                            </button>
                         </Link>
                     </div>
                 </div>
@@ -213,8 +215,8 @@ export default function Navbar({ onFilterChange }) {
                                                     <button
                                                         key={category}
                                                         className={`w-full text-left px-4 py-2 text-sm font-medium rounded-xl ${selectedCategory === category
-                                                                ? 'bg-primary-500 text-white'
-                                                                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                                                            ? 'bg-primary-500 text-white'
+                                                            : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                                                             }`}
                                                         onClick={() => handleCategoryChange(category)}
                                                     >
@@ -271,8 +273,8 @@ export default function Navbar({ onFilterChange }) {
                                                 <button
                                                     key={option}
                                                     className={`px-4 py-2 rounded-xl text-base ${activeFilters.theme.includes(option)
-                                                            ? 'bg-primary-400 text-white'
-                                                            : 'bg-white text-gray-700 border border-gray-200'
+                                                        ? 'bg-primary-400 text-white'
+                                                        : 'bg-white text-gray-700 border border-gray-200'
                                                         }`}
                                                     onClick={() => handleCheckboxChange('theme', option)}
                                                 >
@@ -290,8 +292,8 @@ export default function Navbar({ onFilterChange }) {
                                                 <button
                                                     key={option}
                                                     className={`px-4 py-2 rounded-xl text-base ${activeFilters.activity.includes(option)
-                                                            ? 'bg-primary-400 text-white'
-                                                            : 'bg-white text-gray-700 border border-gray-200'
+                                                        ? 'bg-primary-400 text-white'
+                                                        : 'bg-white text-gray-700 border border-gray-200'
                                                         }`}
                                                     onClick={() => handleCheckboxChange('activity', option)}
                                                 >
@@ -385,8 +387,8 @@ export default function Navbar({ onFilterChange }) {
                                                 <button
                                                     key={option}
                                                     className={`px-4 py-2 rounded-md text-sm font-medium ${activeFilters.vehicle.includes(option)
-                                                            ? 'bg-primary-400 text-white'
-                                                            : 'bg-gray-100 text-gray-700'
+                                                        ? 'bg-primary-400 text-white'
+                                                        : 'bg-gray-100 text-gray-700'
                                                         }`}
                                                     onClick={() => handleCheckboxChange('vehicle', option)}
                                                 >
@@ -404,8 +406,8 @@ export default function Navbar({ onFilterChange }) {
                                                 <button
                                                     key={option}
                                                     className={`px-4 py-2 rounded-md text-sm font-medium ${activeFilters.features.includes(option)
-                                                            ? 'bg-primary-400 text-white'
-                                                            : 'bg-gray-100 text-gray-700'
+                                                        ? 'bg-primary-400 text-white'
+                                                        : 'bg-gray-100 text-gray-700'
                                                         }`}
                                                     onClick={() => handleCheckboxChange('features', option)}
                                                 >
